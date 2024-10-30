@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Корзина</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+<div class="tab">
+    <div class="container">
+        <ul class="img">
+            <li>
+                <div class="a">
+                    <img width="180px" height="130px" src="2.jpeg" alt="Ассорти шаурма">
+                </div>
+                <p>Ассорти шаурма</p>
+                <p class="price" data-price="200">Цена: 200 сом</p>
+                <div class="c">
+                    <button onclick="addToCart('Ассорти шаурма', 200)">в корзину</button>
+                </div>
+            </li>
+            <li>
+                <div class="a">
+                    <img width="180px" height="130px" src="6.jpeg" alt="Бургер">
+                </div>
+                <p>Бургер</p>
+                <p class="price" data-price="150">Цена: 150 сом</p>
+                <div class="c">
+                    <button onclick="addToCart('Бургер', 150)">в корзину</button>
+                </div>
+            </li>
+            <li>
+                <div class="a">
+                    <img width="180px" height="130px" src="7.jpeg" alt="Ассорти куриный">
+                </div>
+                <p>Ассорти куриный</p>
+                <p class="price" data-price="220">Цена: 220 сом</p>
+                <div class="c">
+                    <button onclick="addToCart('Ассорти куриный', 220)">в корзину</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="cart" style="margin-top: 20px;">
+        <h3>Корзина</h3>
+        <ul id="cartItems"></ul>
+        <p>Итого: <span id="totalPrice">0</span> сом</p>
+    </div>
+
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(itemName, itemPrice) {
+            
+            cart.push({ name: itemName, price: itemPrice });
+            total += itemPrice;
+
+            
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItems = document.getElementById('cartItems');
+            const totalPrice = document.getElementById('totalPrice');
+
+           
+            cartItems.innerHTML = '';
+
+            
+            cart.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - ${item.price} сом`;
+                cartItems.appendChild(li);
+            });
+
+            
+            totalPrice.textContent = total;
+        }
+    </script>
+</div>
+</body>
+</html>

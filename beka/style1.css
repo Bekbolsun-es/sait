@@ -1,0 +1,160 @@
+.tab{
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin-left: 3%;
+	width: 96%;
+	margin-top: 5%;
+}
+container {
+	margin-top: 10%;
+    height: 300px; /* Устанавливаем высоту контейнера */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Выравниваем содержимое по нижнему краю */
+    border: 1px solid #ccc;
+}
+
+.img {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Расстояние между элементами */
+}
+
+.img li {
+    text-align: center;
+    border: solid black;
+    margin-top: 15px;
+}
+
+.c a {
+    display: inline-block;
+    padding: 8px 8px;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.img li {
+    list-style: none;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d9534f;
+}
+
+#cart {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+#cartItems li {
+    margin: 10px 0;
+}
+/* Общий стиль корзины */
+#cartItems {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Стиль для каждого элемента корзины */
+#cartItems li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Стили для кнопок */
+#cartItems button {
+    margin: 0 5px;
+}
+
+/* Отображение на мобильных устройствах */
+@media (max-width: 768px) {
+    #cartItems li {
+        flex-direction: column; /* Кнопки расположены ниже текста */
+        align-items: flex-start;
+    }
+    
+    /* Кнопки немного меньше для мобильных */
+    #cartItems button {
+        padding: 5px;
+        font-size: 0.9em;
+    }
+    
+    /* Централизуем корзину на мобильных */
+    #cart {
+        padding: 10px;
+    }
+}
+
+/* Стили для компьютеров и больших экранов */
+@media (min-width: 769px) {
+    #cart {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+    }
+}

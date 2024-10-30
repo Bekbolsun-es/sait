@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AMERICAN PIZZA</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="clava">
+<div class="div1">
+	<p class="d">Ваш выбор ?</p>
+</div>
+<button class="button1">
+	<a href="style2.html"> Выбрать</a>
+</button>
+<script>
+    const button = document.getElementById('colorButton');
+    const colors = ['#ffcccb', '#add8e6', '#90ee90', '#ffeb3b', '#ffb6c1'];
+    let currentColorIndex = 0;
+
+    button.addEventListener('click', () => {
+        currentColorIndex = (currentColorIndex + 1) % colors.length; 
+        document.body.style.backgroundColor = colors[currentColorIndex]; 
+    });
+</script>
+</div>
+</body>
+</html>
